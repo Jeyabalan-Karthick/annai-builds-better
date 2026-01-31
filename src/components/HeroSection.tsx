@@ -50,8 +50,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-white/80 max-w-2xl mb-10"
           >
-            15+ years of excellence in residential and commercial construction. 
-            From foundation to finish, we bring your vision to life with quality, 
+            15+ years of excellence in residential and commercial construction.
+            From foundation to finish, we bring your vision to life with quality,
             integrity, and precision.
           </motion.p>
 

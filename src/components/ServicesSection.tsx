@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { 
-  Home, 
-  Building2, 
-  Paintbrush, 
-  Wrench, 
-  Layers, 
+import {
+  Home,
+  Building2,
+  Paintbrush,
+  Wrench,
+  Layers,
   Key,
-  ArrowRight 
+  ArrowRight
 } from 'lucide-react';
 
 const services = [

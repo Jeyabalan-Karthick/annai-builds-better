@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,18 +13,27 @@ const navItems = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-header">
-      <div className="section-container">
-        <div className="flex items-center justify-between h-20">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4' : 'py-0'}`}>
+      <div className={`mx-auto transition-all duration-500 ${scrolled ? 'max-w-7xl px-4' : 'w-full'}`}>
+        <div className={`glass-header ${scrolled ? 'glass-header-floated' : ''} flex items-center justify-between h-20 px-6 md:px-12 transition-all duration-500`}>
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-amber-dark flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-amber-dark flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
               <span className="text-accent-foreground font-bold text-lg">A</span>
             </div>
-            <div>
+            <div className="flex items-center">
               <span className="text-xl font-bold text-primary font-display">Annai</span>
               <span className="text-xl font-light text-muted-foreground ml-1">Construction</span>
             </div>
@@ -36,11 +45,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative text-sm font-medium transition-colors duration-300 animated-underline ${
-                  location.pathname === item.path
-                    ? 'text-accent'
-                    : 'text-foreground/80 hover:text-foreground'
-                }`}
+                className={`relative text-sm font-medium transition-colors duration-300 animated-underline ${location.pathname === item.path
+                  ? 'text-accent'
+                  : 'text-foreground/80 hover:text-foreground'
+                  }`}
               >
                 {item.name}
               </Link>
@@ -48,7 +56,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-6">
             <a href="tel:+919876543210" className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
               <Phone className="w-4 h-4 mr-2" />
               +91 98765 43210
@@ -91,11 +99,10 @@ const Header = () => {
                   <Link
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`block py-3 text-lg font-medium transition-colors ${
-                      location.pathname === item.path
-                        ? 'text-accent'
-                        : 'text-foreground/80 hover:text-foreground'
-                    }`}
+                    className={`block py-3 text-lg font-medium transition-colors ${location.pathname === item.path
+                      ? 'text-accent'
+                      : 'text-foreground/80 hover:text-foreground'
+                      }`}
                   >
                     {item.name}
                   </Link>
