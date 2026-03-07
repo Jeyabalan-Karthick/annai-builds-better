@@ -13,12 +13,13 @@ const Footer = () => {
   ];
 
   const services = [
-    'Residential Construction',
-    'Commercial Buildings',
-    'Renovation & Remodeling',
-    'Interior Works',
-    'Structural Works',
-    'Turnkey Projects',
+    'Architects',
+    'Civil Engineers',
+    'Builders',
+    'Property Developments',
+    'Project Managements',
+    'Planning Works',
+    'Estimate Preparations',
   ];
 
   return (
@@ -58,7 +59,7 @@ const Footer = () => {
                 </div>
               </div>
               <p className="text-primary-foreground/70 mb-6 text-sm leading-relaxed">
-                With 15+ years of excellence in construction, we build trust and dreams. 
+                With 15+ years of excellence in construction, we build trust and dreams.
                 Your vision, our expertise – creating spaces that inspire.
               </p>
               <div className="flex space-x-4">
@@ -115,8 +116,9 @@ const Footer = () => {
                 <li className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                   <span className="text-primary-foreground/70 text-sm">
-                    123 Construction Avenue,<br />
-                    Chennai, Tamil Nadu 600001
+                    Annai Constructions,<br />
+                    1, Melakarai road ( Madurai road ),<br />
+                    Tharapuram, Thatchanallur, Tirunelveli
                   </span>
                 </li>
                 <li className="flex items-center space-x-3">

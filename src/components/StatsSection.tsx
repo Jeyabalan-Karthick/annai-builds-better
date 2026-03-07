@@ -6,21 +6,21 @@ import { Calendar, Building2, GitBranch, Award } from 'lucide-react';
 const stats = [
   {
     icon: Calendar,
-    number: '15+',
+    number: '34+',
     label: 'Years Experience',
-    description: 'Industry expertise',
+    description: 'Since 1990',
   },
   {
     icon: Building2,
-    number: '250+',
+    number: '100+',
     label: 'Projects Completed',
-    description: 'Successful deliveries',
+    description: 'Around Tirunelveli region',
   },
   {
     icon: GitBranch,
-    number: '6+',
-    label: 'Branches',
-    description: 'Across the region',
+    number: '3+',
+    label: 'Districts Covered',
+    description: 'Tirunelveli, Tenkasi, Tuticorin',
   },
   {
     icon: Award,

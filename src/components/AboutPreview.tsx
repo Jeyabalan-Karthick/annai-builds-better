@@ -6,9 +6,9 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import aboutTeamImage from '@/assets/about-team.jpg';
 
 const highlights = [
-  '15+ years of trusted experience',
+  '34+ years of trusted experience',
+  'More than 100 projects completed',
   'Licensed and certified builders',
-  'On-time project delivery',
   'Quality materials guaranteed',
 ];
 
@@ -44,7 +44,7 @@ const AboutPreview = () => {
             >
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-amber-dark flex items-center justify-center">
-                  <span className="text-2xl font-bold text-accent-foreground">15+</span>
+                  <span className="text-2xl font-bold text-accent-foreground">34+</span>
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Years of Trust</p>
@@ -67,14 +67,14 @@ const AboutPreview = () => {
               Crafting Spaces, Building Futures
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Annai Construction has been a cornerstone of quality construction in the region 
-              for over 15 years. We specialize in residential and commercial projects, 
+              Annai Construction has been a cornerstone of quality construction in the Tirunelveli region
+              for over 34 years. We specialize in residential and commercial projects,
               delivering excellence from foundation to finish.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Our team of skilled engineers and craftsmen work with dedication to 
-              transform your vision into reality. With certifications from leading 
-              construction authorities and partnerships with top material suppliers, 
+              Our team of skilled engineers and craftsmen work with dedication to
+              transform your vision into reality. With certifications from leading
+              construction authorities and partnerships with top material suppliers,
               we ensure every project meets the highest standards.
             </p>
 

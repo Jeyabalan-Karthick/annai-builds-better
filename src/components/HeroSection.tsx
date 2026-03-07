@@ -27,7 +27,7 @@ const HeroSection = () => {
           >
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium">
               <span className="w-2 h-2 rounded-full bg-accent mr-2 animate-pulse" />
-              15+ Years of Excellence
+              34+ Years of Excellence
             </span>
           </motion.div>
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-white/80 max-w-2xl mb-10"
           >
-            15+ years of excellence in residential and commercial construction.
+            34+ years of excellence in residential and commercial construction.
             From foundation to finish, we bring your vision to life with quality,
             integrity, and precision.
           </motion.p>
@@ -85,18 +85,18 @@ const HeroSection = () => {
       >
         <div className="glass-card px-8 py-4 flex items-center gap-8">
           <div className="text-center">
-            <p className="text-2xl font-bold text-primary">250+</p>
+            <p className="text-2xl font-bold text-primary">100+</p>
             <p className="text-sm text-muted-foreground">Projects</p>
           </div>
           <div className="w-px h-12 bg-border" />
           <div className="text-center">
-            <p className="text-2xl font-bold text-primary">15+</p>
+            <p className="text-2xl font-bold text-primary">34+</p>
             <p className="text-sm text-muted-foreground">Years</p>
           </div>
           <div className="w-px h-12 bg-border" />
           <div className="text-center">
-            <p className="text-2xl font-bold text-primary">6+</p>
-            <p className="text-sm text-muted-foreground">Branches</p>
+            <p className="text-2xl font-bold text-primary">3+</p>
+            <p className="text-sm text-muted-foreground">Districts</p>
           </div>
           <div className="w-px h-12 bg-border" />
           <div className="text-center">

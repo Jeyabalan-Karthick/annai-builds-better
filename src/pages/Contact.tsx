@@ -26,8 +26,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Office Address',
-    details: ['123 Construction Avenue,', 'Chennai, Tamil Nadu 600001'],
-    action: 'https://maps.google.com',
+    details: ['Annai Constructions, 1, Melakarai road (Madurai road),', 'Tharapuram, Thatchanallur, Tirunelveli'],
+    action: 'https://maps.google.com/maps?q=Annai+Constructions+Tirunelveli',
   },
   {
     icon: Clock,
@@ -257,7 +257,7 @@ const Contact = () => {
                       <MapPin className="w-12 h-12 text-accent mx-auto mb-4" />
                       <h3 className="font-semibold text-foreground mb-2">Find Us on Map</h3>
                       <p className="text-muted-foreground text-sm mb-4">
-                        123 Construction Avenue, Chennai
+                        Annai Constructions, Tirunelveli
                       </p>
                       <a
                         href="https://maps.google.com"

@@ -5,96 +5,112 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import portfolioHouse1 from '@/assets/portfolio-house-1.jpg';
-import portfolioCommercial1 from '@/assets/portfolio-commercial-1.jpg';
-import portfolioApartment1 from '@/assets/portfolio-apartment-1.jpg';
-import portfolioInterior1 from '@/assets/portfolio-interior-1.jpg';
-import portfolioHouse2 from '@/assets/portfolio-house-2.jpg';
 import heroImage from '@/assets/hero-construction.jpg';
+import architectsImg from '@/assets/service-architects.jpg';
+import civilImg from '@/assets/service-civil.jpg';
+import buildersImg from '@/assets/service-builders.jpg';
+import propertyImg from '@/assets/service-property.jpg';
+import managementImg from '@/assets/service-management.jpg';
+import planningImg from '@/assets/service-planning.jpg';
+import estimateImg from '@/assets/service-estimates.jpg';
 
 const services = [
   {
-    id: 'residential',
-    title: 'Residential Construction',
-    description: 'We build custom homes that reflect your lifestyle and dreams. From single-family homes to luxury villas, our residential construction services cover complete home building with attention to every detail.',
-    image: portfolioHouse1,
+    id: 'architects',
+    title: 'Architects',
+    description: 'Our architectural services combine creative vision with functional design. We create modern, sustainable, and aesthetically pleasing architectural plans tailored to your specific needs.',
+    image: architectsImg,
     features: [
-      'Custom home design and planning',
-      'Foundation to finish construction',
-      'Modern architectural styles',
-      'Energy-efficient building practices',
-      'Quality interior finishing',
-      'Landscaping and exterior work',
+      'Residential and commercial design',
+      'Sustainable architectural solutions',
+      '3D modeling and visualization',
+      'Interior space planning',
+      'Landscape architecture integration',
+      'Concept to final blueprint',
     ],
   },
   {
-    id: 'commercial',
-    title: 'Commercial Construction',
-    description: 'From office buildings to shopping complexes, we deliver commercial projects that combine functionality with aesthetic appeal. Our commercial construction expertise ensures your business has the perfect space.',
-    image: portfolioCommercial1,
+    id: 'civil-engineers',
+    title: 'Civil Engineers',
+    description: 'Expert civil engineering services focused on structural integrity, safety, and efficiency. Our engineers ensure every project is built on a solid foundation and meets all regulatory standards.',
+    image: civilImg,
     features: [
-      'Office buildings and corporate spaces',
-      'Retail and shopping complexes',
-      'Industrial facilities',
-      'Hospitality projects',
-      'Healthcare facilities',
-      'Educational institutions',
+      'Structural design and analysis',
+      'Site investigation and survey',
+      'Environmental impact assessments',
+      'Infrastructure planning',
+      'Quality control and assurance',
+      'Regulatory compliance checks',
     ],
   },
   {
-    id: 'renovation',
-    title: 'Renovation & Remodeling',
-    description: 'Transform your existing space with our comprehensive renovation services. Whether it\'s a complete makeover or targeted improvements, we breathe new life into old structures.',
-    image: portfolioApartment1,
+    id: 'builders',
+    title: 'Builders',
+    description: 'As experienced builders, we take pride in our craftsmanship and attention to detail. We manage the entire construction process from foundation to final finishing.',
+    image: buildersImg,
     features: [
-      'Complete home renovation',
-      'Kitchen and bathroom remodeling',
-      'Room additions and extensions',
-      'Structural modifications',
-      'Facade upgrades',
-      'Modernization projects',
+      'Residential construction',
+      'Commercial building projects',
+      'Industrial construction',
+      'Renovations and remodeling',
+      'High-quality material sourcing',
+      'Skilled labor management',
     ],
   },
   {
-    id: 'interior',
-    title: 'Interior Works',
-    description: 'Our interior solutions cover everything from design concepts to final execution. We create spaces that are not just beautiful but also functional and comfortable.',
-    image: portfolioInterior1,
+    id: 'property',
+    title: 'Property Developments & Dealings',
+    description: 'Strategic property development services that identify and maximize growth opportunities. We handle property dealings with transparency and professional expertise.',
+    image: propertyImg,
     features: [
-      'Interior design consultation',
-      'False ceiling and lighting',
-      'Flooring solutions',
-      'Modular furniture',
-      'Paint and wall treatments',
-      'Electrical and plumbing fixtures',
+      'Residential developments',
+      'Commercial real estate',
+      'Land acquisition and dealing',
+      'Investment consultation',
+      'Property appreciation analysis',
+      'Legal documentation support',
     ],
   },
   {
-    id: 'structural',
-    title: 'Structural Works',
-    description: 'Strong foundations and robust structures are the backbone of any building. Our structural work ensures your construction stands strong for generations.',
-    image: heroImage,
+    id: 'management',
+    title: 'Project Managements',
+    description: 'Our project management ensures your construction project is delivered on time, within budget, and to the highest quality standards. We handle the complexity so you don\'t have to.',
+    image: managementImg,
     features: [
-      'Foundation construction',
-      'RCC framework',
-      'Steel structures',
-      'Reinforcement work',
-      'Load-bearing walls',
-      'Structural repairs and strengthening',
+      'End-to-end site management',
+      'Resource and budget planning',
+      'Timeline and milestone tracking',
+      'Vendor and contractor coordination',
+      'Risk assessment and mitigation',
+      'Regular progress reporting',
     ],
   },
   {
-    id: 'turnkey',
-    title: 'Turnkey Projects',
-    description: 'Our end-to-end turnkey solutions take care of everything from planning to handover. Just share your vision, and we\'ll deliver a ready-to-use space.',
-    image: portfolioHouse2,
+    id: 'planning',
+    title: 'Planning Works',
+    description: 'Detailed planning works that form the roadmap for your construction project. We handle all aspects of pre-construction planning to ensure a smooth execution.',
+    image: planningImg,
     features: [
-      'Complete project management',
-      'Design and planning',
-      'All construction work',
-      'Interior finishing',
-      'MEP installations',
-      'Final handover with documentation',
+      'Comprehensive site planning',
+      'Timeline scheduling',
+      'Resource allocation planning',
+      'Zoning and permit coordination',
+      'Feasibility studies',
+      'Architectural planning integration',
+    ],
+  },
+  {
+    id: 'estimate',
+    title: 'Estimate Preparations',
+    description: 'Accurate estimate preparations are essential for budget management. We provide detailed cost breakdowns to ensure transparency and financial control.',
+    image: estimateImg,
+    features: [
+      'Material cost estimation',
+      'Labor cost breakdowns',
+      'Detailed BOQ preparations',
+      'Cost optimization suggestions',
+      'Financial risk assessment',
+      'Progress-based cost tracking',
     ],
   },
 ];
@@ -126,7 +142,7 @@ const Services = () => {
                 Comprehensive Construction Solutions
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed">
-                From concept to completion, we offer a full range of construction services 
+                From concept to completion, we offer a full range of construction services
                 tailored to meet your unique requirements.
               </p>
             </motion.div>
@@ -146,9 +162,8 @@ const Services = () => {
                     <div
                       ref={ref}
                       id={service.id}
-                      className={`grid lg:grid-cols-2 gap-12 items-center ${
-                        index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                      }`}
+                      className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                        }`}
                     >
                       <motion.div
                         initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -200,24 +215,7 @@ const Services = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-24 bg-secondary/30">
-          <div className="section-container">
-            <div className="glass-card p-12 text-center">
-              <h2 className="section-heading mb-4">Ready to Start Your Project?</h2>
-              <p className="section-subheading mb-8">
-                Contact us today for a free consultation and quote
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold transition-all duration-300 hover:bg-primary/90 group"
-              >
-                Get Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </section>
+        \
       </main>
       <Footer />
     </div>

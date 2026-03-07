@@ -8,12 +8,11 @@ import aboutTeamImage from '@/assets/about-team.jpg';
 import heroImage from '@/assets/hero-construction.jpg';
 
 const timeline = [
-  { year: '2009', title: 'Company Founded', description: 'Started with a vision to build quality homes' },
-  { year: '2012', title: 'First Major Project', description: 'Completed our first commercial complex' },
-  { year: '2015', title: 'Expansion', description: 'Opened branches in 3 new cities' },
-  { year: '2018', title: 'ISO Certification', description: 'Achieved ISO 9001:2015 certification' },
-  { year: '2021', title: '200+ Projects', description: 'Milestone of 200 completed projects' },
-  { year: '2024', title: 'Industry Leader', description: 'Recognized as top construction company' },
+  { year: '1990', title: 'Company Founded', description: 'Started with a vision to build quality homes across the region' },
+  { year: '2004', title: 'Best Builder Award', description: 'Received Best Builder award from தமிழ்நாடு சினிமா கலா மன்றம்' },
+  { year: '2010', title: 'Major Projects', description: 'Completed significant residential and commercial milestones' },
+  { year: '2020', title: '30 Years of Excellence', description: 'Celebrated three decades of building trust' },
+  { year: '2024', title: 'Modern Growth', description: 'Continuing the legacy with modern engineering practices' },
 ];
 
 const values = [
@@ -24,12 +23,11 @@ const values = [
 ];
 
 const certifications = [
+  'Best Builder Award - தமிழ்நாடு சினிமா கலா மன்றம்',
   'ISO 9001:2015 Certified',
-  'RERA Registered Builder',
   'Member - Indian Construction Association',
   'Green Building Council Certified',
-  'Safety Excellence Award 2023',
-  'Best Builder Award - Tamil Nadu 2022',
+  '34+ Years of Industry Experience',
 ];
 
 const About = () => {
@@ -38,7 +36,7 @@ const About = () => {
   const timelineRef = useRef(null);
   const valuesRef = useRef(null);
   const certRef = useRef(null);
-  
+
   const heroInView = useInView(heroRef, { once: true, margin: '-100px' });
   const missionInView = useInView(missionRef, { once: true, margin: '-100px' });
   const timelineInView = useInView(timelineRef, { once: true, margin: '-100px' });
@@ -65,11 +63,11 @@ const About = () => {
                 About Us
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-6">
-                Building Trust Since 2009
+                Building Trust Since 1990
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed">
-                For over 15 years, Annai Construction has been transforming visions into reality. 
-                We are a certified and trusted construction company dedicated to delivering excellence 
+                For over 34 years, Annai Construction has been transforming visions into reality.
+                We are a trusted construction company dedicated to delivering excellence
                 in every project we undertake.
               </p>
             </motion.div>
@@ -98,18 +96,18 @@ const About = () => {
               >
                 <h2 className="section-heading mb-6">Who We Are</h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Annai Construction is a premier construction company headquartered in Chennai, 
-                  with branches across Tamil Nadu. We specialize in residential, commercial, and 
+                  Annai Construction is a premier construction company headquartered in Tirunelveli,
+                  serving the surrounding districts. We specialize in residential, commercial, and
                   industrial construction projects.
                 </p>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Our team comprises experienced engineers, architects, and skilled craftsmen who 
-                  share a common goal: to build structures that stand the test of time. We've 
-                  successfully completed over 250 projects, ranging from individual homes to 
+                  Our team comprises experienced engineers, architects, and skilled craftsmen who
+                  share a common goal: to build structures that stand the test of time. We've
+                  successfully completed over 100 projects, ranging from individual homes to
                   large commercial complexes.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
-                  {['250+ Projects Completed', '15+ Years Experience', '6+ Branches', '100+ Team Members'].map((stat, i) => (
+                  {['100+ Projects Completed', '34+ Years Experience', 'Tirunelveli Region', 'Multidisciplinary Team'].map((stat, i) => (
                     <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-secondary/50">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
                       <span className="font-medium text-foreground">{stat}</span>
@@ -136,8 +134,8 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground font-display mb-4">Our Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  To deliver exceptional construction services that exceed client expectations, 
-                  using innovative techniques, quality materials, and sustainable practices. 
+                  To deliver exceptional construction services that exceed client expectations,
+                  using innovative techniques, quality materials, and sustainable practices.
                   We aim to build not just structures, but lasting relationships with our clients.
                 </p>
               </motion.div>
@@ -152,8 +150,8 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground font-display mb-4">Our Vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  To be the most trusted and preferred construction company in South India, 
-                  known for quality, reliability, and innovation. We envision shaping skylines 
+                  To be the most trusted and preferred construction company in South India,
+                  known for quality, reliability, and innovation. We envision shaping skylines
                   and communities through our commitment to excellence.
                 </p>
               </motion.div>

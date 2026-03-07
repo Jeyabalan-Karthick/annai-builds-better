@@ -15,33 +15,38 @@ import {
 const services = [
   {
     icon: Home,
-    title: 'Residential Construction',
-    description: 'Custom homes built with precision, comfort, and your lifestyle in mind.',
+    title: 'Architects',
+    description: 'Professional architectural design and planning for modern living spaces.',
   },
   {
     icon: Building2,
-    title: 'Commercial Buildings',
-    description: 'Modern commercial spaces designed for functionality and aesthetic appeal.',
-  },
-  {
-    icon: Paintbrush,
-    title: 'Renovation & Remodeling',
-    description: 'Transform existing spaces with our expert renovation services.',
-  },
-  {
-    icon: Wrench,
-    title: 'Interior Works',
-    description: 'Complete interior solutions from design to execution.',
+    title: 'Civil Engineers',
+    description: 'Expert civil engineering services ensuring structural integrity and safety.',
   },
   {
     icon: Layers,
-    title: 'Structural Works',
-    description: 'Strong foundations and structural integrity for lasting buildings.',
+    title: 'Builders',
+    description: 'Quality construction and building services from foundation to finish.',
   },
   {
     icon: Key,
-    title: 'Turnkey Projects',
-    description: 'End-to-end construction solutions, ready to move in.',
+    title: 'Property Developments',
+    description: 'Strategic property development and dealings for residential and commercial growth.',
+  },
+  {
+    icon: Wrench,
+    title: 'Project Managements',
+    description: 'Comprehensive project management to ensure timely and budget-friendly delivery.',
+  },
+  {
+    icon: Paintbrush,
+    title: 'Planning Works',
+    description: 'Detailed planning works that form the successful roadmap for your construction.',
+  },
+  {
+    icon: Layers,
+    title: 'Estimate Preparations',
+    description: 'Accurate estimate preparations to help you manage your budget and costs effectively.',
   },
 ];
 

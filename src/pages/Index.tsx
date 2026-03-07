@@ -22,7 +22,6 @@ const Index = () => {
         <WhyChooseUs />
         <PortfolioPreview />
         <FAQSection />
-        <PartnersSection />
         <TestimonialsSection />
       </main>
       <Footer />
