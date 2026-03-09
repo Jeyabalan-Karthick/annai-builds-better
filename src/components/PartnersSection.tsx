@@ -16,7 +16,7 @@ const PartnersSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-20 bg-background border-y border-border">
+    <section className="py-10 bg-background border-y border-border">
       <div className="section-container" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

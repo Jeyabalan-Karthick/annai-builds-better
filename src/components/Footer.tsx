@@ -155,7 +155,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="section-container py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © {currentYear} Annai Construction. All rights reserved.
+            © {currentYear} Annai Constructions. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
             <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">

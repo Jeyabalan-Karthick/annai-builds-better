@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: 'Are you certified builders?',
-    answer: 'Yes, Annai Construction is fully licensed and certified. We hold all necessary construction permits and certifications, and our team includes certified engineers and architects.',
+    answer: 'Yes, Annai Constructions is fully licensed and certified. We hold all necessary construction permits and certifications, and our team includes certified engineers and architects.',
   },
   {
     question: 'What materials do you use?',
@@ -40,9 +40,9 @@ const FAQSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="py-12 bg-secondary/30">
       <div className="section-container" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -57,7 +57,7 @@ const FAQSection = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Find answers to common questions about our construction services. 
+              Find answers to common questions about our construction services.
               Can't find what you're looking for? Contact us directly.
             </p>
             <div className="glass-card p-6">

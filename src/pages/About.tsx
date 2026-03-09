@@ -48,7 +48,7 @@ const About = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 bg-primary text-primary-foreground overflow-hidden">
+        <section className="relative pt-32 pb-12 bg-primary text-primary-foreground overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <img src={heroImage} alt="" className="w-full h-full object-cover" />
           </div>
@@ -66,7 +66,7 @@ const About = () => {
                 Building Trust Since 1990
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed">
-                For over 34 years, Annai Construction has been transforming visions into reality.
+                For over 34 years, Annai Constructions has been transforming visions into reality.
                 We are a trusted construction company dedicated to delivering excellence
                 in every project we undertake.
               </p>
@@ -75,9 +75,9 @@ const About = () => {
         </section>
 
         {/* Company Introduction */}
-        <section className="py-24 bg-background">
+        <section className="py-12 bg-background">
           <div className="section-container">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={heroInView ? { opacity: 1, x: 0 } : {}}
@@ -85,7 +85,7 @@ const About = () => {
               >
                 <img
                   src={aboutTeamImage}
-                  alt="Annai Construction Team"
+                  alt="Annai Constructions Team"
                   className="w-full h-[500px] object-cover rounded-3xl"
                 />
               </motion.div>
@@ -96,7 +96,7 @@ const About = () => {
               >
                 <h2 className="section-heading mb-6">Who We Are</h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Annai Construction is a premier construction company headquartered in Tirunelveli,
+                  Annai Constructions is a premier construction company headquartered in Tirunelveli,
                   serving the surrounding districts. We specialize in residential, commercial, and
                   industrial construction projects.
                 </p>
@@ -120,7 +120,7 @@ const About = () => {
         </section>
 
         {/* Vision & Mission */}
-        <section className="py-24 bg-secondary/30" ref={missionRef}>
+        <section className="py-12 bg-secondary/30" ref={missionRef}>
           <div className="section-container">
             <div className="grid md:grid-cols-2 gap-8">
               <motion.div
@@ -160,13 +160,13 @@ const About = () => {
         </section>
 
         {/* Timeline */}
-        <section className="py-24 bg-background" ref={timelineRef}>
+        <section className="py-12 bg-background" ref={timelineRef}>
           <div className="section-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={timelineInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-10"
             >
               <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
                 Our Journey
@@ -178,7 +178,7 @@ const About = () => {
               {/* Timeline Line */}
               <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-border hidden md:block" />
 
-              <div className="space-y-12">
+              <div className="space-y-8">
                 {timeline.map((item, index) => (
                   <motion.div
                     key={item.year}
@@ -188,7 +188,7 @@ const About = () => {
                     className={`flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                   >
                     <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                      <div className="glass-card p-6 inline-block">
+                      <div className="glass-card p-6 w-full">
                         <p className="text-accent font-bold text-xl mb-2">{item.year}</p>
                         <h3 className="text-lg font-semibold text-foreground mb-1">{item.title}</h3>
                         <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -204,13 +204,13 @@ const About = () => {
         </section>
 
         {/* Values */}
-        <section className="py-24 bg-primary text-primary-foreground" ref={valuesRef}>
+        <section className="py-12 bg-primary text-primary-foreground" ref={valuesRef}>
           <div className="section-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={valuesInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-10"
             >
               <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
                 What We Stand For
@@ -239,13 +239,13 @@ const About = () => {
         </section>
 
         {/* Certifications */}
-        <section className="py-24 bg-background" ref={certRef}>
+        <section className="py-12 bg-background" ref={certRef}>
           <div className="section-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={certInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-10"
             >
               <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
                 Our Credentials
@@ -256,14 +256,14 @@ const About = () => {
               </p>
             </motion.div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex flex-wrap justify-center gap-6">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={cert}
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={certInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-center gap-4 p-6 glass-card"
+                  className="flex items-center gap-4 p-6 glass-card w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
                 >
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center flex-shrink-0">
                     <Award className="w-6 h-6 text-accent" />

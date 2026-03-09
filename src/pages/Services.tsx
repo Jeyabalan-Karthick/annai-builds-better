@@ -124,7 +124,7 @@ const Services = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 bg-primary text-primary-foreground overflow-hidden">
+        <section className="relative pt-32 pb-12 bg-primary text-primary-foreground overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <img src={heroImage} alt="" className="w-full h-full object-cover" />
           </div>
@@ -150,9 +150,9 @@ const Services = () => {
         </section>
 
         {/* Services List */}
-        <section className="py-24 bg-background">
+        <section className="py-12 bg-background">
           <div className="section-container">
-            <div className="space-y-24">
+            <div className="space-y-14">
               {services.map((service, index) => {
                 const ServiceCard = () => {
                   const ref = useRef(null);

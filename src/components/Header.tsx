@@ -29,14 +29,12 @@ const Header = () => {
       <div className={`mx-auto transition-all duration-500 ${scrolled ? 'max-w-7xl px-4' : 'w-full'}`}>
         <div className={`glass-header ${scrolled ? 'glass-header-floated' : ''} flex items-center justify-between h-20 px-6 md:px-12 transition-all duration-500`}>
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-amber-dark flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300">
-              <span className="text-accent-foreground font-bold text-lg">A</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-xl font-bold text-primary font-display">Annai</span>
-              <span className="text-xl font-light text-muted-foreground ml-1">Construction</span>
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img
+              src="/logo_annai.png"
+              alt="Annai Constructions"
+              className="h-16 w-auto group-hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,7 +45,7 @@ const Header = () => {
                 to={item.path}
                 className={`relative text-sm font-medium transition-colors duration-300 animated-underline ${location.pathname === item.path
                   ? 'text-accent'
-                  : 'text-foreground/80 hover:text-foreground'
+                  : 'text-black hover:text-black'
                   }`}
               >
                 {item.name}
@@ -57,7 +55,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-6">
-            <a href="tel:+919876543210" className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="tel:+919876543210" className="flex items-center text-sm text-black hover:text-black transition-colors">
               <Phone className="w-4 h-4 mr-2" />
               +91 98765 43210
             </a>
@@ -101,7 +99,7 @@ const Header = () => {
                     onClick={() => setIsOpen(false)}
                     className={`block py-3 text-lg font-medium transition-colors ${location.pathname === item.path
                       ? 'text-accent'
-                      : 'text-foreground/80 hover:text-foreground'
+                      : 'text-black hover:text-black'
                       }`}
                   >
                     {item.name}

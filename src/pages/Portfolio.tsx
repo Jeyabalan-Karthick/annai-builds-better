@@ -75,12 +75,12 @@ const Portfolio = () => {
   const galleryRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true, margin: '-100px' });
   const galleryInView = useInView(galleryRef, { once: true, margin: '-100px' });
-  
+
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
-  const filteredProjects = activeCategory === 'All' 
-    ? projects 
+  const filteredProjects = activeCategory === 'All'
+    ? projects
     : projects.filter(p => p.category === activeCategory);
 
   return (
@@ -88,7 +88,7 @@ const Portfolio = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 bg-primary text-primary-foreground overflow-hidden">
+        <section className="relative pt-32 pb-12 bg-primary text-primary-foreground overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <img src={heroImage} alt="" className="w-full h-full object-cover" />
           </div>
@@ -106,7 +106,7 @@ const Portfolio = () => {
                 Projects That Speak Excellence
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed">
-                Explore our collection of completed projects that showcase our commitment 
+                Explore our collection of completed projects that showcase our commitment
                 to quality construction and innovative design.
               </p>
             </motion.div>
@@ -114,7 +114,7 @@ const Portfolio = () => {
         </section>
 
         {/* Portfolio Gallery */}
-        <section className="py-24 bg-background" ref={galleryRef}>
+        <section className="py-12 bg-background" ref={galleryRef}>
           <div className="section-container">
             {/* Category Filter */}
             <motion.div
@@ -127,11 +127,10 @@ const Portfolio = () => {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 ${
-                    activeCategory === category
+                  className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 ${activeCategory === category
                       ? 'bg-gradient-to-r from-accent to-amber-dark text-accent-foreground'
                       : 'bg-secondary text-foreground hover:bg-secondary/80'
-                  }`}
+                    }`}
                 >
                   {category}
                 </button>

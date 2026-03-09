@@ -1,62 +1,39 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Calendar, Building2, GitBranch, Award } from 'lucide-react';
 
 const stats = [
-  {
-    icon: Calendar,
-    number: '34+',
-    label: 'Years Experience',
-    description: 'Since 1990',
-  },
-  {
-    icon: Building2,
-    number: '100+',
-    label: 'Projects Completed',
-    description: 'Around Tirunelveli region',
-  },
-  {
-    icon: GitBranch,
-    number: '3+',
-    label: 'Districts Covered',
-    description: 'Tirunelveli, Tenkasi, Tuticorin',
-  },
-  {
-    icon: Award,
-    number: '100%',
-    label: 'Certified Builder',
-    description: 'Licensed & trusted',
-  },
+  { number: '34+', label: 'Years Experience' },
+  { number: '100+', label: 'Projects Completed' },
+  { number: '3+', label: 'Districts Covered' },
+  { number: '100%', label: 'Certified Builder' },
 ];
 
 const StatsSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section className="py-20 bg-secondary/50">
+    <section className="py-6 bg-primary">
       <div className="section-container" ref={ref}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="stats-card"
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className={`flex flex-col items-center py-4 px-2 ${index < stats.length - 1
+                  ? 'lg:border-r lg:border-white/15'
+                  : ''
+                } ${index % 2 === 0 ? 'border-r border-white/15 lg:border-r' : 'lg:border-r'} ${index < 2 ? 'border-b border-white/15 lg:border-b-0' : ''
+                }`}
             >
-              <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center">
-                <stat.icon className="w-7 h-7 text-accent" />
-              </div>
-              <p className="text-4xl font-bold text-primary font-display mb-1">
+              <p className="text-2xl md:text-3xl font-bold text-white font-display">
                 {stat.number}
               </p>
-              <p className="text-lg font-semibold text-foreground mb-1">
+              <p className="text-xs md:text-sm text-white/70 mt-1">
                 {stat.label}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                {stat.description}
               </p>
             </motion.div>
           ))}

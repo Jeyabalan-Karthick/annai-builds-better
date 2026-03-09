@@ -17,9 +17,9 @@ const AboutPreview = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-12 bg-background">
       <div className="section-container" ref={ref}>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -30,7 +30,7 @@ const AboutPreview = () => {
             <div className="relative rounded-3xl overflow-hidden">
               <img
                 src={aboutTeamImage}
-                alt="Annai Construction Team"
+                alt="Annai Constructions Team"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
@@ -61,13 +61,13 @@ const AboutPreview = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
-              About Annai Construction
+              About Annai Constructions
             </span>
             <h2 className="section-heading mb-6">
               Crafting Spaces, Building Futures
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Annai Construction has been a cornerstone of quality construction in the Tirunelveli region
+              Annai Constructions has been a cornerstone of quality construction in the Tirunelveli region
               for over 34 years. We specialize in residential and commercial projects,
               delivering excellence from foundation to finish.
             </p>

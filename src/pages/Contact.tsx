@@ -55,13 +55,13 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
+
     toast({
       title: "Message Sent Successfully!",
       description: "We'll get back to you within 24 hours.",
@@ -83,7 +83,7 @@ const Contact = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 bg-primary text-primary-foreground overflow-hidden">
+        <section className="relative pt-32 pb-12 bg-primary text-primary-foreground overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <img src={heroImage} alt="" className="w-full h-full object-cover" />
           </div>
@@ -101,7 +101,7 @@ const Contact = () => {
                 Get In Touch With Us
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed">
-                Ready to start your construction project? Contact us for a free consultation 
+                Ready to start your construction project? Contact us for a free consultation
                 and let's discuss how we can bring your vision to life.
               </p>
             </motion.div>
@@ -109,9 +109,9 @@ const Contact = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-24 bg-background" ref={formRef}>
+        <section className="py-12 bg-background" ref={formRef}>
           <div className="section-container">
-            <div className="grid lg:grid-cols-2 gap-16">
+            <div className="grid lg:grid-cols-2 gap-10">
               {/* Contact Form */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}

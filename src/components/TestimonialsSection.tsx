@@ -8,7 +8,7 @@ const testimonials = [
     name: 'Rajesh Kumar',
     role: 'Homeowner',
     location: 'Chennai',
-    content: 'Annai Construction built our dream home exactly as we envisioned. Their attention to detail and commitment to quality exceeded our expectations. Highly recommend!',
+    content: 'Annai Constructions built our dream home exactly as we envisioned. Their attention to detail and commitment to quality exceeded our expectations. Highly recommend!',
     rating: 5,
   },
   {
@@ -22,7 +22,7 @@ const testimonials = [
     name: 'Arjun Menon',
     role: 'Architect',
     location: 'Bangalore',
-    content: 'As an architect, I\'ve worked with many builders. Annai Construction stands out for their precision in executing designs and their collaborative approach.',
+    content: 'As an architect, I\'ve worked with many builders. Annai Constructions stands out for their precision in executing designs and their collaborative approach.',
     rating: 5,
   },
   {
@@ -48,14 +48,14 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-12 bg-background">
       <div className="section-container" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
             Testimonials
@@ -124,9 +124,8 @@ const TestimonialsSection = () => {
                     <button
                       key={index}
                       onClick={() => setCurrentIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                        index === currentIndex ? 'bg-accent' : 'bg-border'
-                      }`}
+                      className={`w-2 h-2 rounded-full transition-colors duration-300 ${index === currentIndex ? 'bg-accent' : 'bg-border'
+                        }`}
                     />
                   ))}
                 </div>

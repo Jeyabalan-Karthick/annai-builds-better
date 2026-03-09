@@ -43,11 +43,7 @@ const services = [
     title: 'Planning Works',
     description: 'Detailed planning works that form the successful roadmap for your construction.',
   },
-  {
-    icon: Layers,
-    title: 'Estimate Preparations',
-    description: 'Accurate estimate preparations to help you manage your budget and costs effectively.',
-  },
+
 ];
 
 const ServicesSection = () => {
@@ -55,14 +51,14 @@ const ServicesSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="py-12 bg-secondary/30">
       <div className="section-container" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
             What We Offer

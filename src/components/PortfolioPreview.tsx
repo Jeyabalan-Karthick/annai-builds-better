@@ -47,14 +47,14 @@ const PortfolioPreview = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-12 bg-background">
       <div className="section-container" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
             Our Work
@@ -73,16 +73,14 @@ const PortfolioPreview = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`portfolio-item ${
-                project.size === 'large' ? 'md:col-span-2 md:row-span-2' : ''
-              } ${project.size === 'medium' ? 'lg:col-span-1' : ''}`}
+              className={`portfolio-item ${project.size === 'large' ? 'md:col-span-2 md:row-span-2' : ''
+                } ${project.size === 'medium' ? 'lg:col-span-1' : ''}`}
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className={`w-full object-cover ${
-                  project.size === 'large' ? 'h-[500px]' : 'h-[250px]'
-                }`}
+                className={`w-full object-cover ${project.size === 'large' ? 'h-[500px]' : 'h-[250px]'
+                  }`}
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="inline-block px-3 py-1 bg-accent/90 text-accent-foreground text-xs font-medium rounded-full mb-2">
