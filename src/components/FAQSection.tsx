@@ -66,10 +66,10 @@ const FAQSection = () => {
                 Our team is here to help with any questions you have.
               </p>
               <a
-                href="tel:+919876543210"
+                href="tel:+917373714780"
                 className="inline-flex items-center text-accent font-medium"
               >
-                Call us: +91 98765 43210
+                Call us: +91 73737 14780
               </a>
             </div>
           </motion.div>

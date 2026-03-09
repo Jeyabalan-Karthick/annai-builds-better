@@ -14,14 +14,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    details: ['+91 98765 43210', '+91 98765 43211'],
-    action: 'tel:+919876543210',
+    details: ['+91 73737 14780'],
+    action: 'tel:+917373714780',
   },
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@annaiconstruction.com', 'sales@annaiconstruction.com'],
-    action: 'mailto:info@annaiconstruction.com',
+    details: ['annaiconstructions1990@gmail.com', 'info@annaiconstructions.in'],
+    action: 'mailto:annaiconstructions1990@gmail.com',
   },
   {
     icon: MapPin,
@@ -56,22 +56,39 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('https://formspree.io/f/annaiconstructions1990@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (response.ok) {
+        setIsSubmitted(true);
+        toast({
+          title: "Message Sent Successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        setFormData({ name: '', phone: '', email: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error Sending Message",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
 
-    toast({
-      title: "Message Sent Successfully!",
-      description: "We'll get back to you within 24 hours.",
-    });
-
-    // Reset form after a delay
-    setTimeout(() => {
-      setFormData({ name: '', phone: '', email: '', message: '' });
-      setIsSubmitted(false);
-    }, 3000);
+      // Reset submission state after a delay
+      if (isSubmitted) {
+        setTimeout(() => setIsSubmitted(false), 3000);
+      }
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -152,7 +169,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 73737 14780"
                         className="h-12 rounded-xl"
                       />
                     </div>
@@ -167,7 +184,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="you@example.com"
+                        placeholder="annaiconstructions1990@gmail.com"
                         className="h-12 rounded-xl"
                       />
                     </div>
@@ -278,11 +295,11 @@ const Contact = () => {
               Our experts are available Monday to Saturday, 9 AM to 6 PM
             </p>
             <a
-              href="tel:+919876543210"
+              href="tel:+917373714780"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-accent to-amber-dark text-accent-foreground rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-glow-lg"
             >
               <Phone className="w-5 h-5 mr-2" />
-              +91 98765 43210
+              +91 73737 14780
             </a>
           </div>
         </section>
