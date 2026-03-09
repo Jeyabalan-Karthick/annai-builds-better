@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    details: ['annaiconstructions1990@gmail.com', 'info@annaiconstructions.in'],
+    details: ['annaiconstructions1990@gmail.com', '  '],
     action: 'mailto:annaiconstructions1990@gmail.com',
   },
   {
