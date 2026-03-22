@@ -5,6 +5,20 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
+    name: 'M Rajendran',
+    role: 'Consultant',
+    location: 'Tirunelveli',
+    content: 'My house of 3000 sq ft built by Annai construction. Rajesh built trust,fortune and success with quality house for us and his touch will very auspicious for family. I wish god to bless abundantly.',
+    rating: 5,
+  },
+  {
+    name: 'M Rajendran',
+    role: 'Consultant',
+    location: 'Tirunelveli',
+    content: 'Mr. Rajesh optimized our 1,600 sq.ft plot to create a spacious 2,050 sq.ft home with exceptional infrastructure and aesthetic appeal. The "minimal" maintenance design for flooring and sanitation has proven incredibly effective over the last three years. Thoughtful placement of utilities and elegant elevation reflect his deep-thinking approach to construction. His expertise ensured maximum safety and ease of operation throughout the project. Overall, I highly recommend Annai Constructions for their outstanding quality and dedication.',
+    rating: 5,
+  },
+  {
     name: 'Rajesh Kumar',
     role: 'Homeowner',
     location: 'Chennai',

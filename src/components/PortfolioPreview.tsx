@@ -3,40 +3,33 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ArrowRight, ExternalLink } from 'lucide-react';
-import portfolioHouse1 from '@/assets/portfolio-house-1.jpg';
-import portfolioCommercial1 from '@/assets/portfolio-commercial-1.jpg';
-import portfolioApartment1 from '@/assets/portfolio-apartment-1.jpg';
-import portfolioInterior1 from '@/assets/portfolio-interior-1.jpg';
-import portfolioHouse2 from '@/assets/portfolio-house-2.jpg';
+import vmChathramHouse from '@/projects/WhatsApp Image 2026-03-19 at 11.08.25 PM.jpeg';
+import tkcNagarHouse from '@/projects/WhatsApp Image 2026-03-19 at 11.09.21 PM.jpeg';
+import tirunelveliModern from '@/projects/WhatsApp Image 2026-03-19 at 11.07.23 PM.jpeg';
+import tirunelveliYellow from '@/projects/WhatsApp Image 2026-03-17 at 9.19.52 PM.jpeg';
 
 const projects = [
   {
-    image: portfolioHouse1,
-    title: 'Modern Villa',
+    image: vmChathramHouse,
+    title: 'Sweet Home - VM Chathram',
     category: 'Residential',
     size: 'large',
   },
   {
-    image: portfolioCommercial1,
-    title: 'Corporate Office',
-    category: 'Commercial',
-    size: 'small',
-  },
-  {
-    image: portfolioApartment1,
-    title: 'Luxury Apartments',
+    image: tirunelveliModern,
+    title: 'Sweet Home - Tirunelveli (Modern)',
     category: 'Residential',
     size: 'small',
   },
   {
-    image: portfolioInterior1,
-    title: 'Interior Design',
-    category: 'Interior',
-    size: 'medium',
+    image: tirunelveliYellow,
+    title: 'Sweet Home - Tirunelveli (Yellow)',
+    category: 'Residential',
+    size: 'small',
   },
   {
-    image: portfolioHouse2,
-    title: 'Premium Residence',
+    image: tkcNagarHouse,
+    title: 'Sweet Home - TKC Nagar',
     category: 'Residential',
     size: 'medium',
   },

@@ -4,69 +4,50 @@ import { useRef, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { X } from 'lucide-react';
-import portfolioHouse1 from '@/assets/portfolio-house-1.jpg';
-import portfolioCommercial1 from '@/assets/portfolio-commercial-1.jpg';
-import portfolioApartment1 from '@/assets/portfolio-apartment-1.jpg';
-import portfolioInterior1 from '@/assets/portfolio-interior-1.jpg';
-import portfolioHouse2 from '@/assets/portfolio-house-2.jpg';
 import heroImage from '@/assets/hero-construction.jpg';
+import vmChathramHouse from '@/projects/WhatsApp Image 2026-03-19 at 11.08.25 PM.jpeg';
+import tkcNagarHouse from '@/projects/WhatsApp Image 2026-03-19 at 11.09.21 PM.jpeg';
+import tirunelveliModern from '@/projects/WhatsApp Image 2026-03-19 at 11.07.23 PM.jpeg';
+import tirunelveliYellow from '@/projects/WhatsApp Image 2026-03-17 at 9.19.52 PM.jpeg';
 
 const categories = ['All', 'Residential', 'Commercial', 'Apartments', 'Interior'];
 
 const projects = [
   {
     id: 1,
-    title: 'Modern Villa - Chennai',
+    title: 'Sweet Home - VM Chathram',
     category: 'Residential',
-    image: portfolioHouse1,
-    description: 'A contemporary 4-bedroom villa with modern amenities',
-    year: '2023',
-    area: '3,500 sq.ft',
+    image: vmChathramHouse,
+    description: 'A spacious 3,000 sq.ft residence built with focus on quality and aesthetics',
+    year: '2024',
+    area: '3,000 sq.ft',
   },
   {
     id: 2,
-    title: 'Corporate Office Complex',
-    category: 'Commercial',
-    image: portfolioCommercial1,
-    description: 'Multi-story office building with state-of-the-art facilities',
-    year: '2023',
-    area: '25,000 sq.ft',
+    title: 'Sweet Home - Tirunelveli (Modern)',
+    category: 'Residential',
+    image: tirunelveliModern,
+    description: 'Contemporary architectural design with premium finishes and modern amenities',
+    year: '2024',
+    area: '2,500 sq.ft',
   },
   {
     id: 3,
-    title: 'Luxury Apartments',
-    category: 'Apartments',
-    image: portfolioApartment1,
-    description: 'Premium residential apartment complex with 50 units',
-    year: '2022',
-    area: '45,000 sq.ft',
+    title: 'Sweet Home - Tirunelveli (Yellow House)',
+    category: 'Residential',
+    image: tirunelveliYellow,
+    description: 'Vibrant and elegant family home optimized for comfort and durability',
+    year: '2023',
+    area: '2,800 sq.ft',
   },
   {
     id: 4,
-    title: 'Contemporary Living Room',
-    category: 'Interior',
-    image: portfolioInterior1,
-    description: 'Modern interior design for a luxury penthouse',
-    year: '2023',
-    area: '2,000 sq.ft',
-  },
-  {
-    id: 5,
-    title: 'Premium Residence',
+    title: 'Sweet Home - TKC Nagar',
     category: 'Residential',
-    image: portfolioHouse2,
-    description: 'Elegant family home with tropical landscaping',
-    year: '2022',
-    area: '4,200 sq.ft',
-  },
-  {
-    id: 6,
-    title: 'Industrial Facility',
-    category: 'Commercial',
-    image: heroImage,
-    description: 'Large-scale industrial construction project',
-    year: '2021',
-    area: '100,000 sq.ft',
+    image: tkcNagarHouse,
+    description: 'A 2,050 sq.ft home optimized for space and minimal maintenance',
+    year: '2024',
+    area: '2,050 sq.ft',
   },
 ];
 
