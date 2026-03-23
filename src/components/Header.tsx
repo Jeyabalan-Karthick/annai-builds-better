@@ -31,7 +31,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img
-              src="/logo_annai.png"
+              src="/nav-bar-logo-transparent.png"
               alt="Annai Constructions"
               className="h-16 w-auto group-hover:scale-105 transition-transform duration-300"
             />

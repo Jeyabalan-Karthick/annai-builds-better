@@ -13,25 +13,25 @@ const projects = [
     image: vmChathramHouse,
     title: 'Sweet Home - VM Chathram',
     category: 'Residential',
-    size: 'large',
+    description: 'A spacious 3,000 sq.ft residence built with focus on quality and aesthetics',
   },
   {
     image: tirunelveliModern,
     title: 'Sweet Home - Tirunelveli (Modern)',
     category: 'Residential',
-    size: 'small',
+    description: 'Contemporary architectural design with premium finishes and modern amenities',
   },
   {
     image: tirunelveliYellow,
-    title: 'Sweet Home - Tirunelveli (Yellow)',
+    title: 'Sweet Home - Tirunelveli ',
     category: 'Residential',
-    size: 'small',
+    description: 'Vibrant and elegant family home optimized for comfort and durability',
   },
   {
     image: tkcNagarHouse,
     title: 'Sweet Home - TKC Nagar',
     category: 'Residential',
-    size: 'medium',
+    description: 'A 2,050 sq.ft home optimized for space and minimal maintenance',
   },
 ];
 
@@ -59,33 +59,35 @@ const PortfolioPreview = () => {
         </motion.div>
 
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.slice(0, 3).map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`portfolio-item ${project.size === 'large' ? 'md:col-span-2 md:row-span-2' : ''
-                } ${project.size === 'medium' ? 'lg:col-span-1' : ''}`}
+              className="group cursor-pointer"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className={`w-full object-cover ${project.size === 'large' ? 'h-[500px]' : 'h-[250px]'
-                  }`}
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="inline-block px-3 py-1 bg-accent/90 text-accent-foreground text-xs font-medium rounded-full mb-2">
-                  {project.category}
-                </span>
-                <h3 className="text-xl font-semibold text-white mb-2">
+              <div className="relative overflow-hidden rounded-2xl mb-4">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <span className="inline-block px-3 py-1 bg-accent/90 text-accent-foreground text-xs font-medium rounded-full">
+                    {project.category}
+                  </span>
+                </div>
+              </div>
+              <div className="px-2">
+                <h3 className="text-xl font-bold text-primary mb-1 group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>
-                <button className="inline-flex items-center text-white/80 hover:text-white text-sm font-medium transition-colors">
-                  View Details
-                  <ExternalLink className="w-4 h-4 ml-1" />
-                </button>
+                <p className="text-sm text-muted-foreground line-clamp-2">
+                  {project.description}
+                </p>
               </div>
             </motion.div>
           ))}
